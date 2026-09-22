@@ -56,28 +56,29 @@ export const solutionTags = [
   "Positive Experience",
 ];
 
+
 export const services = [
   {
-    img: "content-production.png",
-   
+    img: "/content-production.png",
+    icon: "document",
     title: "Content Production",
     desc: "Content built to test decisions — not just look good. Different hooks, angles, and narratives to identify what actually persuades customers.",
   },
   {
-    img: "performance-marketing.png",
-    
+    img: "/performance-marketing.png",
+    icon: "chart",
     title: "Performance Marketing",
     desc: "We scale only what has proven demand. Spend follows clarity — so ads amplify winners instead of funding experiments.",
   },
   {
-    img: "website-app.png",
-    
+    img: "/website-app.png",
+    icon: "monitor",
     title: "Website & App Development",
     desc: "We design buying journeys, not pages. Clear messaging, reduced friction, and structure that helps customers decide faster.",
   },
   {
-    img: "brand-community.png",
-   
+    img: "/brand-community.png",
+    icon: "badge",
     title: "Brand & Community",
     desc: "We help brands earn trust before they try to capture demand. Positioning, audience language, and conversations that make people care — not just follow.",
   },
