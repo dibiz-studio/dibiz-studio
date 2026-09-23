@@ -94,6 +94,7 @@ export const showcaseVideos = [
 ];
 
 export const brandLogos = [
+   "/mindwise.png",
   "https://framerusercontent.com/images/dWuG7k1iQ35t2GZRRGRBgoT7JA.png?width=720&height=291",
   "https://framerusercontent.com/images/FtFBrOXGmBZEuSQdGrCX9DRZFys.png?width=1920&height=1080",
   "https://framerusercontent.com/images/EKIg7UwGoNlP7sWXhlEICPVqQSw.png?width=600&height=173",
