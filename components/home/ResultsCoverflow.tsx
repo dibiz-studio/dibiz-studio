@@ -75,7 +75,8 @@ export default function ResultsCoverflow() {
   }, []);
 
   return (
-    <section className="results">
+        <section className="results">
+      <span className="proven-btn">Our Track Record</span>
       <h2 className="font-display">
         <span className="o">Results</span> We&apos;ve Delivered
       </h2>

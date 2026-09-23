@@ -11,9 +11,9 @@ export default function LogoMarquee() {
       <div className="container-x">
         <FadeUp>
           <span className="pill-label">BRANDS COLLABORAATIONS</span>
-          <h2 className="font-display" style={{ fontSize: "clamp(1.8rem,4vw,2.6rem)", margin: 0 }}>
-            Brands that trust us
-          </h2>
+          <h2 className="font-display" style={{ fontSize: "clamp(2.2rem,5vw,3.4rem)", margin: 0 }}>
+  <span style={{ color: "var(--accent)" }}>Brands</span> that trust us
+</h2>
         </FadeUp>
         <div className="logos-marquee">
           <div className="logos-row r1">

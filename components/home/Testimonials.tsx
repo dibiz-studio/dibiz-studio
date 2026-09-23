@@ -26,12 +26,12 @@ export default function Testimonials() {
     <section className="testimonials">
       <RibbonMarquee label="TESTIMONIALS" top="0.5rem" />
       <p className="testi-big font-display">
-        Real Brands.
-        <br />
-        Real Growth.
-        <br />
-        Real Results.
-      </p>
+  Real <span style={{ color: "var(--accent)" }}>Brands.</span>
+  <br />
+  Real <span style={{ color: "var(--accent)" }}>Growth.</span>
+  <br />
+  Real <span style={{ color: "var(--accent)" }}>Results.</span>
+</p>
       <div className="container-x testi-cards">
         {testimonials.map((t) => (
           <div className="testi-card" key={t.name} onClick={() => setActive(t)}>

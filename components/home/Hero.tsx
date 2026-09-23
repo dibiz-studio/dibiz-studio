@@ -101,13 +101,17 @@ export default function Hero() {
         </div>
       </div>
       <div className="capabilities-strip">
-        <div className="container-x capabilities-inner">
-          <span>Content Production</span>
-          <span>Website &amp; App Design</span>
-          <span>Performance Marketing</span>
-          <span>Brand and Community Building</span>
-        </div>
+  <div className="capabilities-track">
+    {[0, 1].map((rep) => (
+      <div className="capabilities-inner" key={rep} aria-hidden={rep === 1}>
+        <span>Content Production</span>
+        <span>Website &amp; App Design</span>
+        <span>Performance Marketing</span>
+        <span>Brand and Community Building</span>
       </div>
+    ))}
+  </div>
+</div>
       <div className="giant-logo">
         <span>DIBIZ</span>
       </div>

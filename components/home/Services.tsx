@@ -8,8 +8,10 @@ export default function Services() {
     <section className="services" id="services">
       <RibbonMarquee label="SERVICES" />
       <FadeUp className="container-x services-head">
-        <span className="pill-label">SERVICES</span>
-        <h2 className="font-display">What We Fix Before Scaling</h2>
+                       <span className="proven-btn">Our Services</span>
+        <h2 className="font-display" style={{ fontSize: "clamp(2.2rem,5vw,3.4rem)" }}>
+          What We <span style={{ color: "var(--accent)" }}>Fix</span> Before Scaling
+        </h2>
       </FadeUp>
       <div className="container-x services-grid">
         {services.map((s) => (

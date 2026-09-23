@@ -3,30 +3,65 @@
 import { useEffect, useRef } from "react";
 import { revealAvatars } from "@/lib/site-data";
 
+const LINE1 = "Most brands create content that looks good";
+const LINE2 = "then struggle with low website conversions, inconsistent content, and zero repeat customers.";
+
+const WORDS = [
+  ...LINE1.split(" ").map((word) => ({ word, accent: true })),
+  ...LINE2.split(" ").map((word) => ({ word, accent: false })),
+];
+
 export default function RevealSection() {
-  const ref = useRef<HTMLElement>(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
+  const wordRefs = useRef<Array<HTMLSpanElement | null>>([]);
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) el.classList.add("in-view");
-        });
-      },
-      { threshold: 0.4 }
-    );
-    io.observe(el);
-    return () => io.disconnect();
+    const textEl = textRef.current;
+    if (!textEl) return;
+
+    function updateWords() {
+      if (!textEl) return;
+      const rect = textEl.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const start = vh * 0.9;
+      const end = vh * 0.45;
+      const total = rect.height + (start - end);
+      const traveled = start - rect.top;
+      let progress = traveled / total;
+      progress = Math.max(0, Math.min(1, progress));
+
+      const activeCount = Math.round(progress * WORDS.length);
+      wordRefs.current.forEach((el, i) => {
+        if (!el) return;
+        el.classList.toggle("active", i < activeCount);
+      });
+    }
+
+    window.addEventListener("scroll", updateWords, { passive: true });
+    window.addEventListener("resize", updateWords);
+    updateWords();
+
+    return () => {
+      window.removeEventListener("scroll", updateWords);
+      window.removeEventListener("resize", updateWords);
+    };
   }, []);
 
   return (
-    <section className="reveal-section" ref={ref}>
+    <section className="reveal-section">
       <div className="container-x">
-        <p className="reveal-text font-display">
-          <span style={{ color: "var(--accent)" }}>Most brands create content that looks good</span>
-          <span className="muted-word"> then struggle with low website conversions, inconsistent content, and zero repeat customers.</span>
+        <p className="reveal-text font-display" ref={textRef}>
+          {WORDS.map((w, i) => (
+            <span
+              key={i}
+              className={`rv-word${w.accent ? " rv-accent" : ""}`}
+              ref={(el) => {
+                wordRefs.current[i] = el;
+              }}
+            >
+              {w.word}{" "}
+            </span>
+          ))}
         </p>
         <div className="reveal-card">
           <h3>

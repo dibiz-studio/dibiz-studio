@@ -4,7 +4,12 @@ export default function Solution() {
   return (
     <section className="solution" id="about">
       <div className="container-x">
-        <h2 className="solution-title">The Solution</h2>
+               <div className="solution-head">
+          <span className="proven-btn">About Us</span>
+          <h2 className="solution-title">
+            <span className="white">The</span> <span className="accent">Solution</span>
+          </h2>
+        </div>
         <div className="solution-grid">
           <div className="tag-orbit">
             <img

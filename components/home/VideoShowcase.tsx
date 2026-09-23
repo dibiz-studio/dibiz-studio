@@ -41,7 +41,9 @@ export default function VideoShowcase() {
     <section className="showcase" id="work">
       <FadeUp className="container-x showcase-head">
         <span className="proven-btn">Our Proven Process</span>
-        <h2 className="font-display">Brands That Didn&apos;t Just Launch They Took Off</h2>
+       <h2 className="font-display">
+  <span style={{ color: "var(--accent)" }}>Brands</span> That Didn&apos;t Just Launch They Took Off
+</h2>
         <p>High-converting video creatives shot for fast-growing D2C brands. Real results. Real scale.</p>
       </FadeUp>
       <div className="filmstrip" ref={filmstripRef}>
