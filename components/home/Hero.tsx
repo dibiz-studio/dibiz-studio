@@ -63,6 +63,9 @@ export default function Hero() {
       <div className="container-x hero-inner">
         <div className="hero-grid">
           <div className="hero-text-col">
+            <span className="hero-eyebrow">
+              <span className="pulse-dot" /> Social-First Growth Studio
+            </span>
             <h1 className="hero-title font-display">
               Scaling <span className="brand-highlight">Brands<span className="mega">📣</span></span>
               <br />
@@ -76,6 +79,7 @@ export default function Hero() {
                   <img key={src} src={src} alt="" />
                 ))}
               </div>
+              <div className="hero-trust-divider" />
               <div>
                 <div className="hero-trust-stars">★★★★★</div>
                 <div className="hero-trust-sub">200+ 5-star reviews from D2C founders</div>
@@ -84,6 +88,9 @@ export default function Hero() {
             <div className="hero-cta-row">
               <a href={siteConfig.bookCallUrl} target="_blank" rel="noopener noreferrer" className="btn">
                 Schedule a Call ↗
+              </a>
+              <a href="#work" className="btn-ghost">
+                See Our Work
               </a>
             </div>
           </div>

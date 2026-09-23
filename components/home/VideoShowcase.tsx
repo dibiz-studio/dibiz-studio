@@ -38,7 +38,7 @@ export default function VideoShowcase() {
   const doubled = [...showcaseVideos, ...showcaseVideos];
 
   return (
-    <section className="showcase">
+    <section className="showcase" id="work">
       <FadeUp className="container-x showcase-head">
         <span className="proven-btn">Our Proven Process</span>
         <h2 className="font-display">Brands That Didn&apos;t Just Launch They Took Off</h2>

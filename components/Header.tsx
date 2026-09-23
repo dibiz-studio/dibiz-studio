@@ -8,6 +8,7 @@ import { primaryNav, siteConfig } from "@/lib/site-data";
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeHref, setActiveHref] = useState("/");
   const pathname = usePathname();
 
   useEffect(() => {
@@ -21,11 +22,22 @@ export default function Header() {
     setMobileOpen(false);
   }, [pathname]);
 
-  const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
-    if (href.startsWith("/#")) return pathname === "/";
-    return pathname.startsWith(href);
+  // Keep the active link in sync with the actual route/hash
+  useEffect(() => {
+    if (pathname !== "/") {
+      setActiveHref(pathname);
+      return;
+    }
+    const hash = window.location.hash;
+    setActiveHref(hash ? `/${hash}` : "/");
+  }, [pathname]);
+
+  const handleNavClick = (href: string) => {
+    setActiveHref(href);
+    setMobileOpen(false);
   };
+
+  const isActive = (href: string) => activeHref === href;
 
   return (
     <header className={scrolled ? "scrolled" : ""}>
@@ -35,7 +47,12 @@ export default function Header() {
 </Link>
         <nav className="nav-pill">
           {primaryNav.map((item) => (
-            <Link key={item.href} href={item.href} className={isActive(item.href) ? "active" : ""}>
+            <Link
+              key={item.href}
+              href={item.href}
+              className={isActive(item.href) ? "active" : ""}
+              onClick={() => handleNavClick(item.href)}
+            >
               {item.label}
             </Link>
           ))}
@@ -49,7 +66,7 @@ export default function Header() {
       </div>
       <div className={`container-x mobile-nav${mobileOpen ? " open" : ""}`}>
         {primaryNav.map((item) => (
-          <Link key={item.href} href={item.href}>
+          <Link key={item.href} href={item.href} onClick={() => handleNavClick(item.href)}>
             {item.label}
           </Link>
         ))}
