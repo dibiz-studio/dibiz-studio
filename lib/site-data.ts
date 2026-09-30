@@ -13,7 +13,7 @@ export const primaryNav = [
   { label: "Home", href: "/" },
   { label: "About", href: "/#about" },
   { label: "Services", href: "/#services" },
-  { label: "Growth", href: "/#growth" },
+  { label: "Blog", href: "/blog" },
   { label: "Career", href: "/career" },
 ];
 
