@@ -46,9 +46,7 @@ export default function Footer() {
           <div className="social-box">
             <p>Follow us:</p>
             <div className="social-icons">
-  <a href="https://x.com/DibizCreates" target="_blank" rel="noopener noreferrer">
-    <img src="/twitter.png" alt="Twitter" />
-  </a>
+  
   <a href="https://in.linkedin.com/company/dibiz-studio" target="_blank" rel="noopener noreferrer">
     <img src="/linkedin.png" alt="LinkedIn" />
   </a>

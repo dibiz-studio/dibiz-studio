@@ -2,11 +2,11 @@
 
 export const siteConfig = {
   name: "Dibiz Studio",
-  email: "admin@dibizstudio.com",
+  email: "team@dibizsolution.com",
   phone: "+91 8928186991",
   phoneHref: "tel:+918928186991",
   address: "1112, 9, Business Bay Malad, behind Evershine Mall, Ram Nagar, Malad West, Mumbai, Maharashtra 400064",
-  bookCallUrl: "https://calendly.com/snigdhasingh-dibizsolution/discovery-call",
+ bookCallUrl: "https://wa.me/918928186991?text=Hi%2C%20I%27d%20like%20to%20schedule%20a%20discovery%20call",
 };
 
 export const primaryNav = [
@@ -95,6 +95,8 @@ export const showcaseVideos = [
 
 export const brandLogos = [
    "/mindwise.png",
+   "/zoukLogo.png",
+   "/fuaarkLogo.png",
   "https://framerusercontent.com/images/dWuG7k1iQ35t2GZRRGRBgoT7JA.png?width=720&height=291",
   "https://framerusercontent.com/images/FtFBrOXGmBZEuSQdGrCX9DRZFys.png?width=1920&height=1080",
   "https://framerusercontent.com/images/EKIg7UwGoNlP7sWXhlEICPVqQSw.png?width=600&height=173",
