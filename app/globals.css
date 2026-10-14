@@ -234,24 +234,24 @@ header.scrolled{box-shadow:0 10px 30px -15px rgba(0,0,0,.6);}
 .step-card p{color:#d0d0d0;margin:0;line-height:1.55;font-size:.95rem;}
 
 /* ================= TESTIMONIALS (approved design) ================= */
-.testimonials{position:relative;overflow:hidden;isolation:isolate;padding-block:4.5rem 6rem;border-bottom:1px solid var(--border);background:#090c13;color:var(--text);}
-.testi-glow{position:absolute;z-index:-1;width:32rem;height:32rem;border-radius:50%;filter:blur(120px);opacity:.32;background:var(--accent);pointer-events:none;}
+.testimonials{position:relative;overflow:hidden;isolation:isolate;padding-block:4.5rem 6rem;border-bottom:1px solid var(--border);background:var(--bg);color:var(--text);}
+.testi-glow{position:absolute;z-index:-1;width:32rem;height:32rem;border-radius:50%;filter:blur(120px);opacity:.22;background:var(--accent);pointer-events:none;}
 .testi-glow--left{left:-20rem;top:45%;}
 .testi-glow--right{right:-19rem;bottom:-8rem;}
 
 /* header */
 .testi-header{text-align:center;max-width:50rem;margin:0 auto 2.75rem;}
-.testi-eyebrow{display:inline-flex;align-items:center;gap:1.1rem;font-size:.8rem;letter-spacing:.32em;color:#c9ced8;margin:0 0 1.1rem;text-transform:uppercase;}
+.testi-eyebrow{display:inline-flex;align-items:center;gap:1.1rem;font-size:.8rem;letter-spacing:.32em;color:#cfcfcf;margin:0 0 1.1rem;text-transform:uppercase;}
 .testi-eyebrow .line{width:2.5rem;height:1px;background:rgba(255,255,255,.35);}
 .testi-title{font-family:'Unbounded',sans-serif;font-size:clamp(2rem,4.6vw,3.6rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin:0 0 1.1rem;color:#fff;}
 .testi-title .accent{color:var(--accent);}
-.testi-sub{font-size:clamp(1rem,1.3vw,1.12rem);line-height:1.6;color:#d4d8e0;margin:0;}
+.testi-sub{font-size:clamp(1rem,1.3vw,1.12rem);line-height:1.6;color:#d4d4d4;margin:0;}
 
 /* grid */
 .testi-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;}
 
 /* card */
-.testi-card{display:flex;flex-direction:column;justify-content:space-between;gap:1.1rem;padding:1.6rem 1.5rem 1.25rem;background:rgba(17,21,30,.72);border:1px solid rgba(255,255,255,.08);border-radius:.9rem;cursor:pointer;backdrop-filter:blur(6px);transition:border-color .3s ease,transform .3s ease,box-shadow .3s ease;}
+.testi-card{display:flex;flex-direction:column;justify-content:space-between;gap:1.1rem;padding:1.6rem 1.5rem 1.25rem;background:#111111;border:1px solid var(--border);border-radius:.9rem;cursor:pointer;backdrop-filter:blur(6px);transition:border-color .3s ease,transform .3s ease,box-shadow .3s ease;}
 .testi-card:hover,.testi-card:focus-visible{border-color:rgba(245,131,39,.45);transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(245,131,39,.45);outline:none;}
 .testi-card-top{display:grid;grid-template-columns:6.75rem 1fr;gap:1.4rem;align-items:start;}
 
@@ -263,7 +263,7 @@ header.scrolled{box-shadow:0 10px 30px -15px rgba(0,0,0,.6);}
 .testi-hook{font-size:1.35rem;font-weight:600;line-height:1.25;margin:0 0 1rem;color:#fff;}
 .testi-excerpt{font-size:.95rem;line-height:1.55;color:var(--muted);margin:0;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;}
 
-.testi-card-foot{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);}
+.testi-card-foot{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding-top:1rem;border-top:1px solid var(--border);}
 .testi-name{display:inline-flex;align-items:center;gap:.45rem;font-weight:700;font-size:1.05rem;color:#fff;}
 .testi-role{margin-top:.25rem;font-size:.95rem;color:var(--muted);}
 .testi-verified{width:20px;height:20px;color:var(--accent);flex-shrink:0;}
@@ -272,10 +272,10 @@ header.scrolled{box-shadow:0 10px 30px -15px rgba(0,0,0,.6);}
 .testi-arrow-btn:hover,.testi-nav-btn:hover{transform:scale(1.08);box-shadow:0 0 22px rgba(245,131,39,.55);}
 
 /* modal */
-.testi-modal{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:1.25rem;background:rgba(5,7,12,.45);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease;}
+.testi-modal{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:1.25rem;background:rgba(0,0,0,.6);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease;}
 .testi-modal.open{opacity:1;visibility:visible;}
 .testi-modal-card{position:relative;width:min(640px,100%);max-height:calc(100vh - 2.5rem);overflow-y:auto;padding:2.4rem 2.4rem 1.75rem;border-radius:.9rem;border:1px solid rgba(245,131,39,.75);
-  background:radial-gradient(120% 80% at 50% 120%,rgba(245,131,39,.22),transparent 60%),linear-gradient(180deg,rgba(22,26,36,.96),rgba(14,17,25,.98));
+  background:radial-gradient(120% 80% at 50% 120%,rgba(245,131,39,.22),transparent 60%),linear-gradient(180deg,rgba(22,22,22,.97),rgba(12,12,12,.98));
   box-shadow:0 0 0 1px rgba(245,131,39,.15),0 0 60px -10px rgba(245,131,39,.45),0 30px 80px -20px rgba(0,0,0,.8);
   transform:translateY(16px) scale(.97);transition:transform .35s cubic-bezier(.2,.8,.2,1);}
 .testi-modal.open .testi-modal-card{transform:translateY(0) scale(1);}
@@ -287,12 +287,12 @@ header.scrolled{box-shadow:0 10px 30px -15px rgba(0,0,0,.6);}
 .testi-modal-head{display:flex;align-items:center;gap:1.75rem;margin-bottom:1.6rem;}
 .testi-name--lg{font-size:1.45rem;}
 .testi-name--lg .testi-verified{width:24px;height:24px;}
-.testi-role--lg{font-size:1.1rem;color:#d4d8e0;margin-top:.5rem;}
+.testi-role--lg{font-size:1.1rem;color:#d4d4d4;margin-top:.5rem;}
 .testi-modal-hook{font-size:1.4rem;font-weight:700;margin:0 0 1rem;color:#fff;}
-.testi-modal-quote{font-size:1.1rem;line-height:1.6;color:#c9ced8;margin:0 0 1.6rem;}
+.testi-modal-quote{font-size:1.1rem;line-height:1.6;color:#cfcfcf;margin:0 0 1.6rem;}
 
-.testi-modal-foot{display:flex;align-items:center;justify-content:space-between;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.08);}
-.testi-modal-quote-icon{width:30px;height:23px;color:#5b616e;}
+.testi-modal-foot{display:flex;align-items:center;justify-content:space-between;padding-top:1.4rem;border-top:1px solid var(--border);}
+.testi-modal-quote-icon{width:30px;height:23px;color:#4a4a4a;}
 .testi-modal-nav{display:flex;align-items:center;gap:1.1rem;}
 .testi-counter{font-size:.95rem;color:var(--muted);letter-spacing:.05em;margin-right:.25rem;}
 .testi-nav-btn{width:50px;height:50px;}
