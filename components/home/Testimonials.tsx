@@ -16,7 +16,7 @@ const VerifiedIcon = () => (
       fill="currentColor"
       d="M12 1.5l2.6 1.9 3.2-.2 1 3.1 2.6 1.9-1 3.1 1 3.1-2.6 1.9-1 3.1-3.2-.2L12 22.5l-2.6-1.9-3.2.2-1-3.1-2.6-1.9 1-3.1-1-3.1 2.6-1.9 1-3.1 3.2.2L12 1.5z"
     />
-    <path d="M7.5 12.2l3 3 6-6" fill="none" stroke="#0b0e15" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M7.5 12.2l3 3 6-6" fill="none" stroke="#0a0a0a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
