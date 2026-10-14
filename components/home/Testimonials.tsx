@@ -43,6 +43,11 @@ const CloseIcon = () => (
   </svg>
 );
 
+/* ---------- Helpers ---------- */
+// data me pehle se quotes / tick hain, unhe hata ke clean text dikhate hain
+const stripQuotes = (s = "") => s.replace(/^["“”'‘’\s]+|["“”'‘’\s]+$/g, "");
+const cleanName = (s = "") => s.replace(/[✓✔☑]/g, "").trim();
+
 /* ---------- Component ---------- */
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -118,7 +123,7 @@ export default function Testimonials() {
                 </div>
                 <div className="testi-card-body">
                   <QuoteIcon className="testi-quote-icon" />
-                  <h3 className="testi-hook">&ldquo;{t.hook}&rdquo;</h3>
+                  <h3 className="testi-hook">&ldquo;{stripQuotes(t.hook)}&rdquo;</h3>
                   <p className="testi-excerpt">{t.quote}</p>
                 </div>
               </div>
@@ -126,7 +131,7 @@ export default function Testimonials() {
               <div className="testi-card-foot">
                 <div>
                   <div className="testi-name">
-                    {t.name} <VerifiedIcon />
+                    {cleanName(t.name)} <VerifiedIcon />
                   </div>
                   <div className="testi-role">{t.role}</div>
                 </div>
@@ -171,13 +176,13 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <div className="testi-name testi-name--lg">
-                    {active.name} <VerifiedIcon />
+                    {cleanName(active.name)} <VerifiedIcon />
                   </div>
                   <div className="testi-role testi-role--lg">{active.role}</div>
                 </div>
               </div>
 
-              <h3 className="testi-modal-hook">&ldquo;{active.hook}&rdquo;</h3>
+              <h3 className="testi-modal-hook">&ldquo;{stripQuotes(active.hook)}&rdquo;</h3>
               <p className="testi-modal-quote">{active.quote}</p>
 
               <div className="testi-modal-foot">
