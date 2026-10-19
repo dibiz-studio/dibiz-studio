@@ -156,7 +156,7 @@ export const testimonials: Testimonial[] = [
     hook: "From the ground up to sales",
     name: "Founder ✓",
     role: "Mindwise",
-    img: "/mindwise.png",
+    img: "/mindwise log00-removebg-preview.jpg",
   },
   {
     quote: "Dibiz has been a great creative partner for us, consistently delivering 20–30 Meta ad creatives every month. The ads have been performing well, and the team has been great to work with.",
