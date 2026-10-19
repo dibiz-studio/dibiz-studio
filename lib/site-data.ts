@@ -177,7 +177,7 @@ export const testimonials: Testimonial[] = [
     hook: "Your end-to-end growth partner",
     name: "Team ✓",
     role: "Signature",
-    img: "/signatureLogo.png",
+    img: "/signature.png",
   },
 ];
 
