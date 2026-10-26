@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { primaryNav, siteConfig } from "@/lib/site-data";
+import { primaryNav, waLink, waMessages } from "@/lib/site-data";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -57,7 +57,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <a href={siteConfig.bookCallUrl} target="_blank" rel="noopener noreferrer" className="btn">
+        <a href={waLink(waMessages.header)} target="_blank" rel="noopener noreferrer" className="btn">
           Schedule a Call
         </a>
         <button className="menu-btn" aria-label="Toggle menu" onClick={() => setMobileOpen((v) => !v)}>

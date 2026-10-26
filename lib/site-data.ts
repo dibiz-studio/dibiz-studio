@@ -6,7 +6,21 @@ export const siteConfig = {
   phone: "+91 8928186991",
   phoneHref: "tel:+918928186991",
   address: "1112, 9, Business Bay Malad, behind Evershine Mall, Ram Nagar, Malad West, Mumbai, Maharashtra 400064",
- bookCallUrl: "https://wa.me/918928186991?text=Hi%2C%20I%27d%20like%20to%20schedule%20a%20discovery%20call",
+  whatsappNumber: "918928186991", // country code + number, no "+"
+};
+
+/** WhatsApp chat link with a pre-filled message. Every call-to-action button on the site uses this. */
+export function waLink(message: string) {
+  return `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(message)}`;
+}
+
+// Pre-filled messages, one per button, so the team can tell where each lead came from.
+export const waMessages = {
+  header: "Hi Dibiz Studio, I'd like to schedule a discovery call for my brand.",
+  hero: "Hi Dibiz Studio, I saw your website and want to scale my brand with content & tech. Can we talk?",
+  about: "Hi Dibiz Studio, I'd like to know how you can help grow my D2C brand end-to-end.",
+  process: "Hi Dibiz Studio, I'd like to start with the audit step of your 6-step process for my brand.",
+  homeCta: "Hi Dibiz Studio, I'm ready to fix the leaks and scale my brand. Can we schedule a call?",
 };
 
 export const primaryNav = [

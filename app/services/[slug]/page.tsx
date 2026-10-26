@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { getAllPosts, SITE } from "@/lib/blog";
 import { getServicePage, servicePages } from "@/lib/services";
 import { DEFAULT_OG_IMAGE, JsonLd, orgRef } from "@/lib/seo";
-import { siteConfig } from "@/lib/site-data";
+import { waLink } from "@/lib/site-data";
 import { PostCard } from "@/components/blog/PostCard";
 import CtaBox from "@/components/blog/CtaBox";
 import b from "../../blog/blog.module.css";
@@ -105,10 +105,20 @@ export default async function ServicePageRoute({ params }: Props) {
             </p>
           ))}
           <div className={s.actions}>
-            <a href={SITE.calendly} target="_blank" rel="noopener noreferrer" className={b.btnPrimary}>
+            <a
+              href={waLink(`Hi Dibiz Studio, I'd like a free ${page.category} audit for my brand.`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={b.btnPrimary}
+            >
               Book a Free Audit ↗
             </a>
-            <a href={siteConfig.bookCallUrl} target="_blank" rel="noopener noreferrer" className={b.btnGhost}>
+            <a
+              href={waLink(`Hi Dibiz Studio, I'd like to know more about your ${page.category} services.`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={b.btnGhost}
+            >
               Chat on WhatsApp
             </a>
           </div>

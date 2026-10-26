@@ -1,9 +1,9 @@
-import { siteConfig } from "@/lib/site-data";
+import { waLink, waMessages } from "@/lib/site-data";
 
 export default function CtaSection({
   heading,
   buttonLabel = "Schedule a Call",
-  buttonHref = siteConfig.bookCallUrl,
+  buttonHref = waLink(waMessages.homeCta),
 }: {
   heading: string;
   buttonLabel?: string;
