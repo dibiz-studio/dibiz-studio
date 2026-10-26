@@ -110,6 +110,7 @@ export default async function ServicePageRoute({ params }: Props) {
               target="_blank"
               rel="noopener noreferrer"
               className={b.btnPrimary}
+              data-cta="service-hero"
             >
               Book a Free Audit ↗
             </a>
@@ -118,6 +119,7 @@ export default async function ServicePageRoute({ params }: Props) {
               target="_blank"
               rel="noopener noreferrer"
               className={b.btnGhost}
+              data-cta="service-hero"
             >
               Chat on WhatsApp
             </a>
