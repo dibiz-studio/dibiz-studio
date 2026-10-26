@@ -1,6 +1,6 @@
 import FadeUp from "@/components/FadeUp";
 import StepTimeline from "@/components/StepTimeline";
-import { howItWorksSteps, siteConfig } from "@/lib/site-data";
+import { howItWorksSteps, waLink, waMessages } from "@/lib/site-data";
 
 export default function HowItWorks() {
   return (
@@ -10,7 +10,7 @@ export default function HowItWorks() {
           <h2 className="font-display">How it Works</h2>
           <h3>OUR 6 STEP PROCESS</h3>
           <hr />
-          <a href={siteConfig.bookCallUrl} target="_blank" rel="noopener noreferrer" className="btn">
+          <a href={waLink(waMessages.process)} target="_blank" rel="noopener noreferrer" className="btn">
             Schedule a Call
           </a>
         </FadeUp>

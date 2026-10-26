@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { heroReelCol1Videos, heroReelCol2Videos, heroTrustAvatars, siteConfig } from "@/lib/site-data";
+import { heroReelCol1Videos, heroReelCol2Videos, heroTrustAvatars, waLink, waMessages } from "@/lib/site-data";
 
 function ReelColumn({ videos, slow, colRef }: { videos: string[]; slow?: boolean; colRef: React.RefObject<HTMLDivElement | null> }) {
   const doubled = [...videos, ...videos];
@@ -86,7 +86,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="hero-cta-row">
-              <a href={siteConfig.bookCallUrl} target="_blank" rel="noopener noreferrer" className="btn">
+              <a href={waLink(waMessages.hero)} target="_blank" rel="noopener noreferrer" className="btn">
                 Schedule a Call ↗
               </a>
               <a href="#work" className="btn-ghost">

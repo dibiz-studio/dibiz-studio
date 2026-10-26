@@ -1,4 +1,4 @@
-import { siteConfig, solutionTags } from "@/lib/site-data";
+import { solutionTags, waLink, waMessages } from "@/lib/site-data";
 
 export default function Solution() {
   return (
@@ -35,7 +35,7 @@ export default function Solution() {
           </div>
         </div>
         <div className="solution-cta">
-          <a href={siteConfig.bookCallUrl} target="_blank" rel="noopener noreferrer" className="btn">
+          <a href={waLink(waMessages.about)} target="_blank" rel="noopener noreferrer" className="btn">
             Schedule a Call
           </a>
         </div>

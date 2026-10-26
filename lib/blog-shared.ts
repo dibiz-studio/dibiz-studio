@@ -4,7 +4,6 @@ export const SITE = {
   name: "Dibiz Studio",
   url: "https://www.dibizstudio.in",
   logo: "https://www.dibizstudio.in/logoo.png",
-  calendly: "https://calendly.com/snigdhasingh-dibizsolution/discovery-call",
   whatsapp: "918928186991", // country code + number, no "+"
   defaultAuthor: "Dibiz Studio Team",
 };
