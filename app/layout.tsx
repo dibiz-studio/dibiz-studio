@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { SEO, siteJsonLd, JsonLd } from "@/lib/seo";
+import { siteConfig } from "@/lib/site-data";
+import LeadTracking from "@/components/LeadTracking";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+
+// Only the live site reports to Google Analytics, so Vercel previews and local builds don't skew the numbers.
+const analyticsEnabled = process.env.VERCEL_ENV === "production" || process.env.NEXT_PUBLIC_FORCE_ANALYTICS === "1";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SEO.url),
@@ -63,7 +70,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 />
         <JsonLd data={siteJsonLd()} />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <FloatingWhatsApp />
+        {analyticsEnabled && <LeadTracking />}
+      </body>
+      {analyticsEnabled && <GoogleAnalytics gaId={siteConfig.gaId} />}
     </html>
   );
 }

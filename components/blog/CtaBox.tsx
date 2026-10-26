@@ -21,10 +21,10 @@ export default function CtaBox({
         <p className={s.ctaText}>{text}</p>
       </div>
       <div className={s.ctaActions}>
-        <a href={audit} target="_blank" rel="noopener noreferrer" className={s.btnPrimary}>
+        <a href={audit} target="_blank" rel="noopener noreferrer" className={s.btnPrimary} data-cta="audit-box">
           Book a Free Audit ↗
         </a>
-        <a href={chat} target="_blank" rel="noopener noreferrer" className={s.btnGhost}>
+        <a href={chat} target="_blank" rel="noopener noreferrer" className={s.btnGhost} data-cta="audit-box">
           Chat on WhatsApp
         </a>
       </div>
