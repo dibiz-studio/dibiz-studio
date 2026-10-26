@@ -7,6 +7,7 @@ export const siteConfig = {
   phoneHref: "tel:+918928186991",
   address: "1112, 9, Business Bay Malad, behind Evershine Mall, Ram Nagar, Malad West, Mumbai, Maharashtra 400064",
   whatsappNumber: "918928186991", // country code + number, no "+"
+  mapsUrl: "https://maps.app.goo.gl/eVX7LMx7ytCcTSnX6", // Google Business Profile
 };
 
 /** WhatsApp chat link with a pre-filled message. Every call-to-action button on the site uses this. */

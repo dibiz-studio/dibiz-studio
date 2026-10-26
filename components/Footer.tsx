@@ -14,7 +14,10 @@ export default function Footer() {
             <span className="ic">☎</span> <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
           </div>
           <div className="contact-card">
-            <span className="ic">📍</span> {siteConfig.address}
+            <span className="ic">📍</span>{" "}
+            <a href={siteConfig.mapsUrl} target="_blank" rel="noopener noreferrer">
+              {siteConfig.address}
+            </a>
           </div>
         </div>
         <div>
