@@ -1,4 +1,6 @@
+import Link from "next/link";
 import FadeUp from "@/components/FadeUp";
+import { serviceHrefByTitle } from "@/lib/services";
 import RibbonMarquee from "@/components/RibbonMarquee";
 import { ServiceIcon } from "@/components/ServiceIcons";
 import { services } from "@/lib/site-data";
@@ -18,8 +20,13 @@ export default function Services() {
           <FadeUp className="service-card" key={s.title}>
             <img loading="lazy" decoding="async" className="bg-img" src={s.img} alt="" />
             <ServiceIcon name={s.icon} className="service-icon" />
-            <h3>{s.title}</h3>
+            <h3>
+              <Link href={serviceHrefByTitle(s.title)}>{s.title}</Link>
+            </h3>
             <p>{s.desc}</p>
+            <Link href={serviceHrefByTitle(s.title)} className="service-more">
+              Explore {s.title} →
+            </Link>
           </FadeUp>
         ))}
       </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-data";
+import { servicePages } from "@/lib/services";
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
       <div className="container-x footer-grid">
         <div>
           <div className="contact-card">
-            <span className="ic">✉</span> {siteConfig.email}
+            <span className="ic">✉</span> <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
           </div>
           <div className="contact-card">
             <span className="ic">☎</span> <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
@@ -21,7 +22,7 @@ export default function Footer() {
           <ul className="footer-list">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/#about">About</Link></li>
-            <li><Link href="/#services">Services</Link></li>
+            <li><Link href="/services">Services</Link></li>
             <li><Link href="/blog">Blog</Link></li>
             <li><Link href="/career">Career</Link></li>
             <li><Link href="/#growth">Contact</Link></li>
@@ -30,10 +31,11 @@ export default function Footer() {
         <div>
           <div className="footer-title">Services</div>
           <ul className="footer-list">
-            <li>Content Production</li>
-            <li>Content Marketing</li>
-            <li>UI/UX Design</li>
-            <li>Social Media Marketing</li>
+            {servicePages.map((p) => (
+              <li key={p.slug}>
+                <Link href={`/services/${p.slug}`}>{p.navLabel}</Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div>

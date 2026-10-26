@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `${SITE.url}/blog/${post.slug}`;
   const images = post.cover ? [{ url: post.cover, alt: post.coverAlt ?? post.title }] : undefined;
   return {
-    title: `${post.title} | ${SITE.name}`,
+    title: post.title,
     description: post.description,
     keywords: post.tags,
     authors: [{ name: post.author }],

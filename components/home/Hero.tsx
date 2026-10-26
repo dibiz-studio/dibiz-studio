@@ -64,10 +64,10 @@ export default function Hero() {
         <div className="hero-grid">
           <div className="hero-text-col">
             <span className="hero-eyebrow">
-              <span className="pulse-dot" /> Social-First Growth Studio
+              <span className="pulse-dot" /> Social-First D2C Growth Studio · Mumbai
             </span>
             <h1 className="hero-title font-display">
-              Scaling <span className="brand-highlight">Brands<span className="mega">📣</span></span>
+              Scaling <span className="brand-highlight">Brands<span className="mega" aria-hidden="true">📣</span></span>
               <br />
               via Content
               <br />

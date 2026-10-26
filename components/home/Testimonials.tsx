@@ -111,7 +111,7 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <article
               className="testi-card"
-              key={t.name}
+              key={t.role}
               onClick={() => setActiveIndex(i)}
               role="button"
               tabIndex={0}
@@ -119,7 +119,7 @@ export default function Testimonials() {
             >
               <div className="testi-card-top">
                 <div className="testi-avatar">
-                  <img src={t.img} alt={t.name} loading="lazy" decoding="async" />
+                  <img src={t.img} alt={`${t.role} logo`} loading="lazy" decoding="async" />
                 </div>
                 <div className="testi-card-body">
                   <QuoteIcon className="testi-quote-icon" />
@@ -172,7 +172,7 @@ export default function Testimonials() {
             <div className="testi-modal-content" key={activeIndex}>
               <div className="testi-modal-head">
                 <div className="testi-avatar testi-avatar--lg">
-                  <img src={active.img} alt={active.name} />
+                  <img src={active.img} alt={`${active.role} logo`} />
                 </div>
                 <div>
                   <div className="testi-name testi-name--lg">
