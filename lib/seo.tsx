@@ -22,6 +22,7 @@ export const SEO = {
   ],
   locale: "en_IN",
   sameAs: [
+    siteConfig.mapsUrl,
     "https://in.linkedin.com/company/dibiz-studio",
     "https://www.instagram.com/dibizstudio",
     "https://www.facebook.com/Dibizsolution",
@@ -63,6 +64,7 @@ export function siteJsonLd() {
         postalCode: "400064",
         addressCountry: "IN",
       },
+      hasMap: siteConfig.mapsUrl,
       areaServed: { "@type": "Country", name: "India" },
       knowsAbout: [
         "Content production",
