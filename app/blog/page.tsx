@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 import { getAllPosts, SITE } from "@/lib/blog";
 import BlogFilter from "@/components/blog/BlogFilter";
 import CtaBox from "@/components/blog/CtaBox";
@@ -9,7 +10,7 @@ const DESCRIPTION =
   "Practical guides on content production, Meta ads, website development and brand building for D2C and fashion brands in India, from the team at Dibiz Studio, Mumbai.";
 
 export const metadata: Metadata = {
-  title: `${TITLE} | ${SITE.name}`,
+  title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/blog" },
   openGraph: {
@@ -18,8 +19,9 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
     siteName: SITE.name,
+    images: [DEFAULT_OG_IMAGE],
   },
-  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION, images: [DEFAULT_OG_IMAGE.url] },
 };
 
 export default function BlogPage() {

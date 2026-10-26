@@ -12,7 +12,7 @@ export const siteConfig = {
 export const primaryNav = [
   { label: "Home", href: "/" },
   { label: "About", href: "/#about" },
-  { label: "Services", href: "/#services" },
+  { label: "Services", href: "/services" },
   { label: "Blog", href: "/blog" },
   { label: "Career", href: "/career" },
 ];

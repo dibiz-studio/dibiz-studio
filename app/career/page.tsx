@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CtaSection from "@/components/CtaSection";
@@ -10,8 +11,16 @@ import HiringProcess from "@/components/career/HiringProcess";
 import FounderQuote from "@/components/career/FounderQuote";
 
 export const metadata: Metadata = {
-  title: "Careers — Dibiz Studio",
-  description: "Join the team behind fast-growing brands. 8 open roles across content, design, strategy, and growth.",
+  title: "Careers: Marketing, Content & Design Jobs in Mumbai",
+  description:
+    "Join Dibiz Studio in Malad, Mumbai. Open roles in video editing, graphic design, social media, brand strategy, business development and web development.",
+  alternates: { canonical: "/career" },
+  openGraph: {
+    url: "/career",
+    title: "Careers at Dibiz Studio",
+    description: "Open roles across content, design, strategy and growth at our Mumbai studio.",
+    images: [DEFAULT_OG_IMAGE],
+  },
 };
 
 export default function CareerPage() {
