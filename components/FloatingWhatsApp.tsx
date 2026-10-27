@@ -8,6 +8,7 @@ import { servicePages } from "@/lib/services";
 function messageFor(path: string) {
   const service = servicePages.find((s) => path === `/services/${s.slug}`);
   if (service) return `Hi Dibiz Studio, I'm looking at your ${service.category} services and would like to talk.`;
+  if (path.startsWith("/case-studies")) return "Hi Dibiz Studio, I saw your case studies and would like to talk about growing my brand.";
   if (path.startsWith("/blog/")) return "Hi Dibiz Studio, I was reading your blog and would like to talk about growing my brand.";
   if (path.startsWith("/blog")) return "Hi Dibiz Studio, I came from your blog and would like to talk about growing my brand.";
   return "Hi Dibiz Studio, I'm on your website and would like to talk about growing my brand.";
