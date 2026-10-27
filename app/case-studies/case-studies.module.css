@@ -6,7 +6,7 @@
   border: 1px solid var(--line); border-radius: 999px; text-decoration: none; color: var(--ink-2); font-weight: 600;
 }
 .jump a:hover { color: var(--ink); border-color: var(--accent); }
-.jump img { width: 30px; height: 30px; border-radius: 50%; object-fit: contain; background: #fff; }
+.jump img { width: 52px; height: 30px; padding: 4px 6px; border-radius: 8px; object-fit: contain; background: #fff; }
 
 .list { display: grid; gap: 28px; }
 
@@ -17,9 +17,10 @@
 }
 .side { padding: 32px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 20px; }
 .logo {
-  width: 96px; height: 96px; border-radius: 20px; background: #fff; display: grid; place-items: center; overflow: hidden;
+  width: 100%; max-width: 200px; height: 96px; padding: 14px 20px; border-radius: 18px; background: #fff;
+  display: flex; align-items: center; justify-content: center;
 }
-.logo img { width: 84%; height: 84%; object-fit: contain; }
+.logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .brand { margin: 0; font-family: var(--display); font-size: 26px; font-weight: 700; letter-spacing: 0; }
 .duration { margin: -12px 0 0; font-size: 14px; color: var(--ink-3); }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
@@ -87,6 +88,7 @@
 .row li:hover { transform: translateY(-4px); box-shadow: 0 16px 36px -14px rgba(245, 131, 39, .55), inset 0 0 0 1px rgba(245, 131, 39, .35); }
 /* Every logo fills the same box, so small logos grow and wide ones shrink to match. */
 .row img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.row li.darkCard { background: #1c1c1c; box-shadow: 0 10px 30px -14px rgba(0, 0, 0, .7), inset 0 0 0 1px rgba(255, 255, 255, .1); }
 @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* ---------- Case card accents ---------- */
@@ -106,7 +108,7 @@
 @media (max-width: 860px) {
   .study { grid-template-columns: 1fr; }
   .side { border-right: 0; border-bottom: 1px solid var(--line); flex-direction: row; flex-wrap: wrap; align-items: center; padding: 24px; }
-  .logo { width: 72px; height: 72px; border-radius: 16px; }
+  .logo { width: 150px; height: 76px; padding: 12px 16px; border-radius: 14px; }
   .duration { margin: 0; width: 100%; }
   .tags { width: 100%; }
   .body { padding: 24px; }

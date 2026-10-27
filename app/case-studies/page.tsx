@@ -21,9 +21,23 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION, images: [DEFAULT_OG_IMAGE.url] },
 };
 
-// Client logos from the homepage marquee, minus brands that already have a case study above.
-const FEATURED_LOGO_FILES = ["/mindwise.png", "/zoukLogo.png", "/fuaarkLogo.png"];
-const moreLogos = brandLogos.filter((src) => !FEATURED_LOGO_FILES.includes(src));
+// Client logos from the homepage marquee, minus brands that already have a case study above
+// and one duplicate upload. Matched by the image ID in the Framer URL.
+const HIDDEN_LOGOS = [
+  "/mindwise.png",
+  "/zoukLogo.png",
+  "/fuaarkLogo.png",
+  "Tw1Q3rUISOWGx5PYiPbA9za0", // bloomastra (has its own case study)
+  "eQMFC3BzVjQWLjudFIARb9ivDA8", // Aayush, second copy of the same logo
+];
+// White or very light logos that disappear on a white card get a dark card instead.
+const LIGHT_LOGOS = [
+  "PanybpCnMAXRTAjbssfFuVp358", // white logo
+  "F0AMqzRJotPJXSpwXAUDohu1zQ", // SUYU, pale on white
+  "dWuG7k1iQ35t2GZRRGRBgoT7JA", // logo with its own dark background
+];
+const matches = (src: string, ids: string[]) => ids.some((id) => src.includes(id));
+const moreLogos = brandLogos.filter((src) => !matches(src, HIDDEN_LOGOS));
 const half = Math.ceil(moreLogos.length / 2);
 const logoRows = [moreLogos.slice(0, half), moreLogos.slice(half)];
 
@@ -167,7 +181,7 @@ export default function CaseStudiesPage() {
               {[0, 1].map((copy) => (
                 <ul key={copy} className={s.row} aria-hidden={copy === 1 || undefined}>
                   {row.map((src) => (
-                    <li key={src}>
+                    <li key={src} className={matches(src, LIGHT_LOGOS) ? s.darkCard : undefined}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={src} alt={copy === 1 ? "" : "Dibiz Studio client brand logo"} loading="lazy" decoding="async" />
                     </li>
