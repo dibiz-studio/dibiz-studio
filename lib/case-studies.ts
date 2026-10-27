@@ -3,6 +3,7 @@
 // Everything here comes from what clients have said in their testimonials (lib/site-data.ts).
 // RESULTS: add only real, client-approved numbers. A case study's "Results" box appears
 // automatically once `results` has at least one entry, e.g.
+// Logos live in /public/clients and are cropped tight so they fill their box evenly.
 //   results: [{ value: "3.1x", label: "ROAS on Meta ads" }, { value: "40%", label: "Lower CPA in 60 days" }],
 
 export type CaseStudy = {
@@ -26,7 +27,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "mindwise",
     brand: "Mindwise",
-    logo: "/mindwise log00-removebg-preview.jpg",
+    logo: "/clients/mindwise.png",
     services: ["Website & App Development", "Content Production", "Performance Marketing"],
     brief: "A new D2C brand that needed everything built from the ground up: website, content and ads.",
     work: [
@@ -42,7 +43,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "xyxx",
     brand: "XYXX",
-    logo: "/xyxxLogo.jpg",
+    logo: "/clients/xyxx.png",
     services: ["Content Production", "Performance Marketing"],
     brief: "A brand running Meta ads at scale that needed a steady pipeline of fresh Meta ad creatives.",
     work: [
@@ -58,7 +59,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "signature",
     brand: "Signature",
-    logo: "/SignatureeLogo.png",
+    logo: "/clients/signature.png",
     services: ["Brand & Community", "Content Production", "Performance Marketing", "Website & App Development"],
     brief: "A brand looking for one partner to run positioning, content, ads and the website together.",
     work: [
@@ -75,7 +76,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "bloomastra",
     brand: "bloomastra",
-    logo: "/bloomastraLogo.png",
+    logo: "/clients/bloomastra.png",
     services: ["Content Production", "Performance Marketing", "Website & App Development"],
     brief: "A growing brand that wanted content, performance marketing and tech handled by one team.",
     work: ["Content production", "Performance marketing", "Website and tech support"],
@@ -88,7 +89,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "fuaark",
     brand: "Fuaark",
-    logo: "/fuaarkLogoo.jpg",
+    logo: "/clients/fuaark.png",
     services: ["Content Production", "Performance Marketing"],
     brief: "A brand that wanted stronger brand recall from its top-of-funnel Meta ads.",
     work: [
@@ -103,7 +104,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "zouk",
     brand: "Zouk",
-    logo: "/zoukLogoo.png",
+    logo: "/clients/zouk.png",
     services: ["Content Production"],
     brief: "A brand that wanted episodic content its audience would actually watch.",
     work: ["Concept, scripting and production of a micro-drama series", "Distribution-ready edits for social"],
