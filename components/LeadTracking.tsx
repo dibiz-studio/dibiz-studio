@@ -42,7 +42,8 @@ export default function LeadTracking() {
 
       sendGAEvent("event", "generate_lead", {
         method,
-        cta_text: (link.textContent ?? "").replace(/\s+/g, " ").trim().slice(0, 80),
+        // Icon-only buttons (floating WhatsApp) have no text, so fall back to their aria-label.
+        cta_text: ((link.textContent ?? "").replace(/\s+/g, " ").trim() || link.getAttribute("aria-label") || "").slice(0, 80),
         cta_location: ctaLocation(link),
         page_path: window.location.pathname,
       });
