@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DEFAULT_OG_IMAGE } from "@/lib/seo";
+import Footer from "@/components/Footer";
 import { landingHtml } from "./landing-html";
 import LandingInit from "./LandingInit";
 import "./landing.css";
@@ -21,11 +22,13 @@ export const metadata: Metadata = {
  * The markup is rendered on the server (good for SEO and speed); LandingInit adds the behaviour
  * (WhatsApp links, quote wizard, scrolling site recordings) in the browser.
  * All styles are scoped under .lpw so they never touch the rest of the site.
+ * The footer is the shared site footer, so this page matches the others.
  */
 export default function WebDevelopmentLanding() {
   return (
     <>
       <div className="lpw" dangerouslySetInnerHTML={{ __html: landingHtml }} />
+      <Footer />
       <LandingInit />
     </>
   );
