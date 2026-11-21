@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "@/lib/blog";
 import { caseStudies } from "@/lib/case-studies";
-import { servicePages } from "@/lib/services";
+import { servicePages, serviceHref as serviceLink } from "@/lib/services";
 import { brandLogos, waLink } from "@/lib/site-data";
 import { DEFAULT_OG_IMAGE, JsonLd, orgRef } from "@/lib/seo";
 import CtaBox from "@/components/blog/CtaBox";
@@ -43,7 +43,7 @@ const logoRows = [moreLogos.slice(0, half), moreLogos.slice(half)];
 
 const serviceHref = (name: string) => {
   const p = servicePages.find((sp) => sp.category === name);
-  return p ? `/services/${p.slug}` : "/services";
+  return p ? serviceLink(p) : "/services";
 };
 
 export default function CaseStudiesPage() {

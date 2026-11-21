@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getAllPosts, SITE } from "@/lib/blog";
-import { getServicePage, servicePages } from "@/lib/services";
+import { getServicePage, servicePages, serviceHref } from "@/lib/services";
 import { DEFAULT_OG_IMAGE, JsonLd, orgRef } from "@/lib/seo";
 import { waLink } from "@/lib/site-data";
 import { PostCard } from "@/components/blog/PostCard";
@@ -214,7 +214,7 @@ export default async function ServicePageRoute({ params }: Props) {
         <h2 className={b.sectionTitle}>Other services</h2>
         <div className={s.others}>
           {others.map((o) => (
-            <Link key={o.slug} href={`/services/${o.slug}`}>
+            <Link key={o.slug} href={serviceHref(o)}>
               {o.navLabel}
             </Link>
           ))}

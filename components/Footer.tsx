@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-data";
-import { servicePages } from "@/lib/services";
+import { servicePages, serviceHref } from "@/lib/services";
 
 export default function Footer() {
   return (
@@ -37,7 +37,7 @@ export default function Footer() {
           <ul className="footer-list">
             {servicePages.map((p) => (
               <li key={p.slug}>
-                <Link href={`/services/${p.slug}`}>{p.navLabel}</Link>
+                <Link href={serviceHref(p)}>{p.navLabel}</Link>
               </li>
             ))}
           </ul>

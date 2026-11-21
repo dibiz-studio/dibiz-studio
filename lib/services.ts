@@ -17,6 +17,8 @@ export type ServicePage = {
   forWho: string[];
   proof?: { quote: string; brand: string };
   faqs: { q: string; a: string }[];
+  /** Dedicated landing page. When set, every service link on the site opens it instead of /services/[slug]. */
+  landingPage?: string;
 };
 
 export const servicePages: ServicePage[] = [
@@ -63,6 +65,7 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "performance-marketing",
+    landingPage: "/growth-marketing",
     category: "Performance Marketing",
     navLabel: "Performance Marketing",
     img: "/performance-marketing.png",
@@ -104,6 +107,7 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "website-development",
+    landingPage: "/web-development",
     category: "Website & App Development",
     navLabel: "Website & App Development",
     img: "/website-app.png",
@@ -190,7 +194,12 @@ export function getServicePage(slug: string) {
   return servicePages.find((s) => s.slug === slug) ?? null;
 }
 
+/** Where a service link should go: its landing page if it has one, otherwise its /services page. */
+export function serviceHref(p: ServicePage) {
+  return p.landingPage ?? `/services/${p.slug}`;
+}
+
 export function serviceHrefByTitle(title: string) {
   const s = servicePages.find((p) => p.category === title);
-  return s ? `/services/${s.slug}` : "/#services";
+  return s ? serviceHref(s) : "/#services";
 }

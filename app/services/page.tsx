@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { SITE } from "@/lib/blog";
-import { servicePages } from "@/lib/services";
+import { servicePages, serviceHref } from "@/lib/services";
 import { DEFAULT_OG_IMAGE, JsonLd, orgRef } from "@/lib/seo";
 import CtaBox from "@/components/blog/CtaBox";
 import b from "../blog/blog.module.css";
@@ -55,7 +55,7 @@ export default function ServicesIndex() {
 
       <div className={s.cards}>
         {servicePages.map((p) => (
-          <Link key={p.slug} href={`/services/${p.slug}`} className={s.box} style={{ textDecoration: "none" }}>
+          <Link key={p.slug} href={serviceHref(p)} className={s.box} style={{ textDecoration: "none" }}>
             <Image
               src={p.img}
               alt={`${p.category} services`}
