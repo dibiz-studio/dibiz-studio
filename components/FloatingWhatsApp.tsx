@@ -18,8 +18,8 @@ export default function FloatingWhatsApp() {
   const path = usePathname() ?? "/";
   // Career page visitors are job seekers, not clients.
   if (path.startsWith("/career")) return null;
-  // The web development landing page has its own WhatsApp button and mobile bar.
-  if (path.startsWith("/web-development")) return null;
+  // The landing pages have their own WhatsApp button and mobile bar.
+  if (path.startsWith("/web-development") || path.startsWith("/growth-marketing")) return null;
 
   return (
     <a
